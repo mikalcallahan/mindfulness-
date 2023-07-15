@@ -15,6 +15,10 @@ export class AboutComponent {
       link: 'https://github.com/mikalcallahan',
     },
     {
+      title: 'twitter',
+      link: 'https://twitter.com/mikalcallahan',
+    },
+    {
       title: 'webring',
       link: 'https://webring.xxiivv.com',
     },
