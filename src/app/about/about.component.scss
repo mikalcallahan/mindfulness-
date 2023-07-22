@@ -1,7 +1,27 @@
 .about {
+  align-items: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
+
+  .introduction {
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    margin-bottom: 24rem;
+    padding: 2rem;
+
+    p:first-child {
+      font-size: 2.6rem;
+    }
+
+    > * {
+      margin-top: 1rem;
+    }
+
+    h2 {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
 }

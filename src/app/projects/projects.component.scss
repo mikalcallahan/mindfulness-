@@ -1,3 +1,27 @@
-ul {
+#projects {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   padding: 0 4rem;
+  width: 90%;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    margin-bottom: 20rem;
+    font-size: 1.8rem;
+    padding: 2rem;
+    // width: 30%;
+
+    > * {
+      margin-top: 1rem;
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  }
 }

@@ -3,16 +3,17 @@
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
-    width: 95%;
+    padding-left: 0;
+    // width: 100%;
 
     :first-child {
-      cursor: auto;
+      // cursor: auto;
       margin-right: auto;
       padding-left: 0;
     }
 
     li {
-      cursor: pointer;
+      // cursor: pointer;
       padding-left: 1rem;
     }
   }

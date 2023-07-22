@@ -1,8 +1,9 @@
-<div class="projects">
+<div id="projects" class="page-container">
   <div>
+    <h2>A few things I've worked on</h2>
     <ul>
       <li *ngFor="let project of projects">
-        <a [href]="project.link">{{ project.name }}</a>
+        <a class="link" [href]="project.link">{{ project.name }}</a>
       </li>
     </ul>
   </div>

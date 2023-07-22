@@ -5,10 +5,10 @@ import { ProjectsComponent } from './projects/projects.component';
 export const routes: Routes = [
   {
     path: '',
-    component: AboutComponent
+    component: AboutComponent,
   },
   {
     path: 'projects',
-    component: ProjectsComponent
-  }
+    component: ProjectsComponent,
+  },
 ];

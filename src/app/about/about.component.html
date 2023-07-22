@@ -1,14 +1,15 @@
-<div class="about">
+<div class="about page-container">
   <div class="introduction">
-    <p>
-      A self-driven and highly motivated software engineer in love with the
-      marriage of design and function whose interested in crafting beautiful
-      experiences at the intersection of art and technology.
-    </p>
+    <!-- <p>Creating and meditating</p> -->
+    <h2>Software engineer in love with the marriage of design and function</h2>
+    <div>
+      Crafting at the intersection of art and technology, with a touch of
+      mindfulness.
+    </div>
     <div>
       <ul>
         <li *ngFor="let link of links">
-          <a [href]="link.link">{{ link.title }}</a>
+          <a class="link" [href]="link.link">{{ link.title }}</a>
         </li>
       </ul>
     </div>
