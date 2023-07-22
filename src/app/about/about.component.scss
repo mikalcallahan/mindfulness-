@@ -4,16 +4,11 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  .introduction {
+  > div {
     align-items: center;
     flex-wrap: wrap;
     font-size: 1.8rem;
-    margin-bottom: 24rem;
     padding: 2rem;
-
-    p:first-child {
-      font-size: 2.6rem;
-    }
 
     > * {
       margin-top: 1rem;
