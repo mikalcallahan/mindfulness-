@@ -18,11 +18,11 @@ app-root {
 #container {
   height: 100vh;
   padding: 2rem 2rem 0 2rem;
-  overflow-x: hidden;
 }
 
 .page-container {
   height: 100%;
+  overflow-x: hidden;
   width: 100%;
 
   > div {
