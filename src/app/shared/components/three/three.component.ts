@@ -1,20 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  BoxGeometry,
-  Color,
-  Mesh,
-  MeshBasicMaterial,
-  PerspectiveCamera,
-  Scene,
-  WebGLRenderer,
-} from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-// import * as THREE from 'three/src/Three';
+import * as THREE from 'three';
 
 @Component({
-  selector: 'three',
+  selector: 'app-three',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './three.component.html',
@@ -22,10 +13,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 })
 export class ThreeComponent implements AfterViewInit {
   @ViewChild('threeContainer') threeContainer!: ElementRef;
+
   ngAfterViewInit(): void {
-    console.log('threeContainer', this.threeContainer)
-    const scene: Scene = new Scene();
-    scene.background = new Color(objectColor);
+    const scene: THREE.Scene = new THREE.Scene();
+    scene.background = new THREE.Color(objectColor);
     scene.add(cube);
 
     const canvas: HTMLCanvasElement =
@@ -54,21 +45,21 @@ export class ThreeComponent implements AfterViewInit {
 const backgroundColor = 0xe5e7e6;
 const objectColor = 0x141301;
 
-const geometry: BoxGeometry = new BoxGeometry();
-const material: MeshBasicMaterial = new MeshBasicMaterial({
+const geometry: THREE.BoxGeometry = new THREE.BoxGeometry();
+const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({
   color: backgroundColor,
   wireframe: true,
 });
-const cube: Mesh = new Mesh(geometry, material);
+const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
 
-const camera: PerspectiveCamera = new PerspectiveCamera(
+const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / 2 / (window.innerHeight / 2),
   0.1,
-  1000
+  1000,
 );
 
-const renderer: WebGLRenderer = new WebGLRenderer();
+const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
 
 const onWindowResize = () => {
