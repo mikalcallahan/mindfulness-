@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Shared } from './shared';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent, ThreeComponent } from './shared/components';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Shared],
+  imports: [NavbarComponent, RouterOutlet, ThreeComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'mindfulness-angular';
