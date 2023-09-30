@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Shared } from '../..';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'navbar',
   standalone: true,
-  imports: [Shared],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
-
-}
+export class NavbarComponent {}
