@@ -1,0 +1,17 @@
+#list-container {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0 2rem;
+
+    :first-child {
+      margin-right: auto;
+      padding-left: 0;
+    }
+
+    li {
+      padding-left: 1rem;
+    }
+  }
+}
