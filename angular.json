@@ -20,9 +20,6 @@
             "configFile": "vite.config.ts",
             "main": "src/main.ts",
             "outputPath": "dist/client",
-            "styles": [
-              "src/styles.css"
-            ]
           },
           "defaultConfiguration": "production",
           "configurations": {
