@@ -44,3 +44,27 @@ app-root {
     color: #141301;
   }
 }
+
+analog-markdown-route {
+  height: 100vh;
+  padding: 2rem;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.analog-markdown-route {
+  font-size: 1.8rem;
+  margin-bottom: 44rem;
+  padding: 0 4rem;
+
+  h5 {
+    font-size: 1.4rem;
+    margin: 0.5rem;
+  }
+
+  a {
+    color: #141301;
+  }
+}
