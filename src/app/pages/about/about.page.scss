@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 
   > div {
+    width: 40%;
+  }
+
+  > div {
     align-items: center;
     flex-wrap: wrap;
     font-size: 1.8rem;
@@ -19,4 +23,33 @@
       margin-bottom: 0;
     }
   }
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+
+  li {
+    display: inline;
+  }
+}
+
+.list-container {
+  width: 5%;
+}
+
+.image-container {
+  padding: 0.5%;
+  width: 100%;
+}
+
+li:last-of-type {
+  h5 a div {
+    margin-left: 11%;
+    width: 80%;
+  }
+}
+
+img {
+  width: 100%;
 }

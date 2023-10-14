@@ -11,16 +11,19 @@ import { CommonModule } from '@angular/common';
 export default class AboutComponent {
   links = [
     {
+      icon: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      link: 'https://www.github.com/mikalcallahan',
       title: 'github',
-      link: 'https://github.com/mikalcallahan',
     },
     {
-      title: 'twitter',
-      link: 'https://twitter.com/mikalcallahan',
+      icon: 'https://webring.xxiivv.com/icon.black.svg',
+      link: 'https://webring.xxiivv.com/', // TODO: add id to url
+      title: 'XXIIVV webring',
     },
     {
-      title: 'webring',
-      link: 'https://webring.xxiivv.com',
+      icon: '/icons/brands/x/logo-black.png',
+      link: 'https://www.x.com/mikalcallahan',
+      title: 'x (fka twitter)',
     },
   ];
 }

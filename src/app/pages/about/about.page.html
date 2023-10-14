@@ -6,11 +6,15 @@
       Crafting at the intersection of art and technology, with a touch of
       mindfulness.
     </div>
-    <div>
+    <div class="list-container">
       <ul>
         <li *ngFor="let link of links" class="link">
           <h5>
-            <a [href]="link.link">{{ link.title }}</a>
+            <a [href]="link.link" target="_blank" rel="noopener">
+              <div class="image-container">
+                <img [src]="link.icon" [alt]="link.title" />
+              </div>
+            </a>
           </h5>
         </li>
       </ul>
