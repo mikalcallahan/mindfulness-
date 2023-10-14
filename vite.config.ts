@@ -14,7 +14,17 @@ export default defineConfig(({ mode }) => ({
     mainFields: ['module'],
   },
   plugins: [
-    // analog({ ssr: false }),
+    analog({
+      prerender: {
+        routes: async () => [
+          '/',
+          '/about',
+          '/projects',
+          '/thoughts',
+          '/thoughts/on-stillness',
+        ],
+      },
+    }),
     angular({
       inlineStylesExtension: 'scss',
     }),

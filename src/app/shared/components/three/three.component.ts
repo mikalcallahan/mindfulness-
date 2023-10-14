@@ -15,6 +15,32 @@ export class ThreeComponent implements AfterViewInit {
   @ViewChild('threeContainer') threeContainer!: ElementRef;
 
   ngAfterViewInit(): void {
+    const backgroundColor = 0xe5e7e6;
+    const objectColor = 0x141301;
+
+    const geometry: THREE.BoxGeometry = new THREE.BoxGeometry();
+    const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({
+      color: backgroundColor,
+      wireframe: true,
+    });
+    const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
+
+    const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / 2 / (window.innerHeight / 2),
+      0.1,
+      1000,
+    );
+
+    const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+
+    const onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth * 0.5, window.innerHeight * 0.5);
+    };
+
     const scene: THREE.Scene = new THREE.Scene();
     scene.background = new THREE.Color(objectColor);
     scene.add(cube);
@@ -41,29 +67,3 @@ export class ThreeComponent implements AfterViewInit {
     animate();
   }
 }
-
-const backgroundColor = 0xe5e7e6;
-const objectColor = 0x141301;
-
-const geometry: THREE.BoxGeometry = new THREE.BoxGeometry();
-const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({
-  color: backgroundColor,
-  wireframe: true,
-});
-const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
-
-const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / 2 / (window.innerHeight / 2),
-  0.1,
-  1000,
-);
-
-const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-
-const onWindowResize = () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth * 0.5, window.innerHeight * 0.5);
-};
