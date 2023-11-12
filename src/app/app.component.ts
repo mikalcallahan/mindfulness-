@@ -9,7 +9,18 @@ import '../styles.scss';
   standalone: true,
   imports: [NavbarComponent, RouterOutlet, ThreeComponent],
   templateUrl: './app.component.html',
+  // template: ` <router-outlet></router-outlet> `,
+  /*
+  styles: [
+    `
+      :host {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+      }
+    `,
+  ],
+  */
 })
-export class AppComponent {
-  title = 'mindfulness-angular';
-}
+export class AppComponent {}

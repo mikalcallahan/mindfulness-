@@ -14,10 +14,12 @@ export default defineConfig(({ mode }) => ({
     mainFields: ['module'],
   },
   plugins: [
-    // analog({ ssr: false }),
+    analog(),
+    /*
     angular({
       inlineStylesExtension: 'scss',
     }),
+    */
   ],
   test: {
     globals: true,
