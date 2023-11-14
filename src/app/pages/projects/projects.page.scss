@@ -2,13 +2,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  // padding: 0 4rem;
-  // width: 100%;
 
   div {
     display: flex;
     flex-wrap: wrap;
-    // font-size: 1.8rem;
 
     > * {
       margin-top: 1rem;
@@ -18,10 +15,6 @@
       padding: 0;
       margin: 0;
       width: 100%;
-    }
-
-    h5 {
-      // font-size: 1.6rem;
     }
   }
 }
