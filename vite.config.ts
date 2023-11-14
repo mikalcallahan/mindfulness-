@@ -2,7 +2,6 @@
 
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
-import angular from '@analogjs/vite-plugin-angular';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -14,12 +13,21 @@ export default defineConfig(({ mode }) => ({
     mainFields: ['module'],
   },
   plugins: [
-    analog(),
-    /*
-    angular({
-      inlineStylesExtension: 'scss',
+    analog({
+      prerender: {
+        routes: async () => [
+          '/',
+          '/about',
+          '/projects',
+          '/thoughts',
+          '/thoughts/on-stillness',
+          '/thoughts/de-tristesse',
+        ],
+        sitemap: {
+          host: 'https://mikal.online',
+        },
+      },
     }),
-    */
   ],
   test: {
     globals: true,
