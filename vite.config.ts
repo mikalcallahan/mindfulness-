@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => ({
           '/projects',
           '/thoughts',
           '/thoughts/on-stillness',
+          '/thoughts/de-tristesse',
         ],
         sitemap: {
           host: 'https://mikal.online',
