@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LayoutComponent } from '../../shared/components/layout';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LayoutComponent],
   styleUrls: ['about.page.scss'],
   templateUrl: './about.page.html',
 })
