@@ -5,7 +5,9 @@
       <ul>
         <li *ngFor="let project of projects" class="link">
           <h5>
-            <a [href]="project.link">{{ project.name }}</a>
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer"
+              >{{ project.name }}</a
+            >
           </h5>
         </li>
       </ul>
