@@ -16,12 +16,12 @@ export default class AboutComponent {
       link: 'https://github.com/mikalcallahan',
     },
     {
-      title: 'twitter',
-      link: 'https://twitter.com/mikalcallahan',
+      title: 'linkedin',
+      link: 'https://www.linkedin.com/in/mikalcallahan/',
     },
     {
-      title: 'webring',
-      link: 'https://webring.xxiivv.com',
+      title: 'x',
+      link: 'https://x.com/mikalcallahan',
     },
   ];
 }
