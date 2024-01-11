@@ -6,3 +6,4 @@ import { NavbarComponent, ThreeComponent } from './components';
 // const Components = [NavbarComponent, ThreeComponent];
 
 // export const Shared = [...DefaultModules, ...Components];
+export * from './components';

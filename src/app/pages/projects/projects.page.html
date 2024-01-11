@@ -1,12 +1,16 @@
 <div id="projects" class="page-container">
   <div>
-    <h2>A few things I've worked on</h2>
-    <ul>
-      <li *ngFor="let project of projects" class="link">
-        <h5>
-          <a [href]="project.link">{{ project.name }}</a>
-        </h5>
-      </li>
-    </ul>
+    <app-layout header="A few things I've worked on">
+      <!-- <h2>A few things I've worked on</h2> -->
+      <ul>
+        <li *ngFor="let project of projects" class="link">
+          <h5>
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer"
+              >{{ project.name }}</a
+            >
+          </h5>
+        </li>
+      </ul>
+    </app-layout>
   </div>
 </div>

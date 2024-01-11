@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent, ThreeComponent } from './shared/components';
 
-import '../styles.scss';
+// import '../styles.scss';
 
 @Component({
   selector: 'app-root',
