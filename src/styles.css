@@ -3,7 +3,6 @@
   /*font-family: Inter, Avenir, Helvetica, Arial, sans-serif;*/
   color-scheme: light dark;
   color: var(--text-color-dark);
-  /* color: rgba(255, 255, 255, 0.87); */
   background-color: #141303;
   letter-spacing: 0.013rem;
   font-synthesis: none;
@@ -13,11 +12,7 @@
   -webkit-text-size-adjust: 100%;
 
   --text-color-dark: rgba(255, 255, 255, 0.9);
-  /* --text-color-dark: rgba(255, 255, 255, 0.87); */
-
-  /* --text-color-light: #213547; */
   --text-color-light: #213547;
-  /* --link-color-light: #141301; */
   --link-color-light: #141303;
 }
 
@@ -102,7 +97,6 @@ h1 {
 
 .link {
   cursor: pointer;
-  /* color: rgba(255, 255, 255, 0.87); */
   color: var(--text-color-dark);
 
   h5 {
@@ -111,9 +105,7 @@ h1 {
   }
 
   a {
-    /* color: rgba(255, 255, 255, 0.87); */
     color: var(--text-color-dark);
-    /* color: #fff; */
   }
 
   &.link--no-underline {
@@ -159,7 +151,6 @@ analog-markdown-route {
   }
 
   a {
-    /* color: rgba(255, 255, 255, 0.87); */
     color: var(--text-color-dark);
     font-size: 1.4rem;
     font-weight: 590;
