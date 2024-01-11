@@ -6,6 +6,13 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
+    publicDir: 'src/assets',
+    build: {
+      target: ['es2020'],
+    },
+    resolve: {
+      mainFields: ['module'],
+    },
     plugins: [angular()],
     test: {
       globals: true,
