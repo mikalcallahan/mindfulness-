@@ -1,10 +1,8 @@
 import {
-  AfterViewInit,
   Component,
   ElementRef,
   ViewChild,
   afterNextRender,
-  afterRender,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -27,12 +25,12 @@ export class ThreeComponent {
   @ViewChild('threeContainer') threeContainer!: ElementRef;
 
   initThree(): void {
-    const backgroundColor = 0xe5e7e6;
-    const objectColor = 0x141301;
+    const objectColor = 0xe5e7e6;
+    const backgroundColor = black;
 
     const geometry: THREE.BoxGeometry = new THREE.BoxGeometry();
     const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({
-      color: backgroundColor,
+      color: objectColor,
       wireframe: true,
     });
 
@@ -54,7 +52,7 @@ export class ThreeComponent {
       renderer.setSize(window.innerWidth * 0.5, window.innerHeight * 0.5);
     };
     const scene: THREE.Scene = new THREE.Scene();
-    scene.background = new THREE.Color(objectColor);
+    scene.background = new THREE.Color(backgroundColor);
     scene.add(cube);
 
     const canvas: HTMLCanvasElement =
@@ -79,3 +77,5 @@ export class ThreeComponent {
     animate();
   }
 }
+
+const black = 0x151515;

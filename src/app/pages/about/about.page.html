@@ -1,21 +1,23 @@
 <div class="about page-container">
   <div>
-    <!-- <p>Creating and meditating</p> -->
-    <h2>Software engineer in love with the marriage of design and function</h2>
-    <div>
-      Crafting at the intersection of art and technology, with a touch of
-      mindfulness.
-    </div>
-    <div>
-      <ul>
-        <li *ngFor="let link of links" class="link">
-          <h5>
-            <a [href]="link.link" target="_blank" rel="noopener noreferrer"
-              >{{ link.title }}</a
-            >
-          </h5>
-        </li>
-      </ul>
-    </div>
+    <app-layout
+      header="Software engineer in love with the marriage of design and function"
+    >
+      <div class="sub-header">
+        Crafting at the intersection of art and technology, with a touch of
+        mindfulness.
+      </div>
+      <div>
+        <ul>
+          <li *ngFor="let link of links" class="link">
+            <h5>
+              <a [href]="link.link" target="_blank" rel="noopener noreferrer"
+                >{{ link.title }}</a
+              >
+            </h5>
+          </li>
+        </ul>
+      </div></app-layout
+    >
   </div>
 </div>
