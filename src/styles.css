@@ -2,7 +2,7 @@
 :root {
   /*font-family: Inter, Avenir, Helvetica, Arial, sans-serif;*/
   color-scheme: light dark;
-  color: var(--text-color-dark);
+  color: var(--text-color-dark-mode);
   background-color: var(--black);
   letter-spacing: 0.013rem;
   font-synthesis: none;
@@ -11,14 +11,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --text-color-dark: var(--white);
+  --text-color-dark-mode: var(--white);
   --white: rgba(255, 255, 255, 0.9);
 
   /* --black: #100f0f; */
   /* --black: #040303; */
   --black: #151515;
-  --text-color-light: var(--black);
-  --link-color-light: var(--black);
+  --text-color-light-mode: var(--black);
+  --link-color-light-mode: var(--black);
 }
 
 button {
@@ -42,11 +42,11 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--text-color-light);
+    color: var(--text-color-light-mode);
     background-color: var(--white);
   }
   a {
-    color: var(--link-color-light);
+    color: var(--link-color-light-mode);
   }
 
   a:hover {
@@ -102,15 +102,10 @@ h1 {
 
 .link {
   cursor: pointer;
-  color: var(--text-color-dark);
-
-  h5 {
-    font-size: 1.4rem;
-    margin: 0.5rem;
-  }
+  color: var(--text-color-dark-mode);
 
   a {
-    color: var(--text-color-dark);
+    color: var(--text-color-dark-mode);
   }
 
   &.link--no-underline {
@@ -122,12 +117,17 @@ h1 {
   }
 }
 
+.link h5 {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+
 @media (prefers-color-scheme: light) {
   .link {
-    color: var(--link-color-light);
+    color: var(--link-color-light-mode);
 
     a {
-      color: var(--link-color-light);
+      color: var(--link-color-light-mode);
     }
   }
 }
@@ -146,26 +146,25 @@ analog-markdown-route {
   margin-bottom: 44rem;
   padding: 0 4rem;
 
-  h2 {
-    font-size: 3.2rem;
-  }
-
-  h5 {
-    font-size: 1.4rem;
-    margin: 0.5rem;
-  }
-
   a {
-    color: var(--text-color-dark);
-    font-size: 1.4rem;
+    color: var(--text-color-dark-mode);
     font-weight: 590;
   }
+}
+
+.analog-markdown-route h5 {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+
+.analog-markdown-route h2 {
+  font-size: 3.2rem;
 }
 
 @media (prefers-color-scheme: light) {
   .analog-markdown-route {
     a {
-      color: var(--link-color-light);
+      color: var(--link-color-light-mode);
     }
   }
 }
