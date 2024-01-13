@@ -104,13 +104,13 @@ h1 {
   cursor: pointer;
   color: var(--text-color-dark-mode);
 
-  a {
+  :is(a) {
     color: var(--text-color-dark-mode);
   }
 
   &.link--no-underline {
     h5 {
-      a {
+      :is(a) {
         text-decoration: none;
       }
     }
@@ -126,7 +126,7 @@ h1 {
   .link {
     color: var(--link-color-light-mode);
 
-    a {
+    :is(a) {
       color: var(--link-color-light-mode);
     }
   }
@@ -146,7 +146,7 @@ analog-markdown-route {
   margin-bottom: 44rem;
   padding: 0 4rem;
 
-  a {
+  :is(a) {
     color: var(--text-color-dark-mode);
     font-weight: 590;
   }
@@ -163,7 +163,7 @@ analog-markdown-route {
 
 @media (prefers-color-scheme: light) {
   .analog-markdown-route {
-    a {
+    :is(a) {
       color: var(--link-color-light-mode);
     }
   }
