@@ -109,7 +109,7 @@ h1 {
   }
 
   &.link--no-underline {
-    h5 {
+    :is(h5) {
       :is(a) {
         text-decoration: none;
       }
