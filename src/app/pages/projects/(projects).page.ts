@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Project } from './interfaces';
 import { LayoutComponent } from '../../shared/components/layout';
 import { projects } from './projects';
 
