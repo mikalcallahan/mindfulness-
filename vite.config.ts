@@ -11,7 +11,13 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog()],
+  plugins: [
+    analog({
+      prerender: {
+        routes: ['', '/moment'],
+      },
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
