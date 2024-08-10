@@ -16,6 +16,12 @@ export default defineConfig(({ mode }) => ({
       prerender: {
         routes: ['', '/moment'],
       },
+      vite: {
+        // Required to use the Analog SFC format
+        experimental: {
+          supportAnalogFormat: true,
+        },
+      },
     }),
   ],
   test: {
