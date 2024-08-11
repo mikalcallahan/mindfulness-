@@ -17,7 +17,6 @@ export default defineConfig(({ mode }) => ({
         routes: ['', '/moment'],
       },
       vite: {
-        // Required to use the Analog SFC format
         experimental: {
           supportAnalogFormat: true,
         },
