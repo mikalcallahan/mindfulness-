@@ -1,0 +1,6 @@
+<script lang="ts">
+import AboutComponent from './about/(about).page';
+
+</script>
+<template><app-about/>
+</template>
