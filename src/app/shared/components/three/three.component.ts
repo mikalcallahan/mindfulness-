@@ -36,20 +36,27 @@ export class ThreeComponent {
 
     const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
 
+    const isMobile = window.innerWidth <= 500;
+
+    const width = isMobile ? window.innerWidth : window.innerWidth / 2;
+
+    const fov = isMobile ? 125 : 75;
+
     const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
-      75,
+      fov,
       window.innerWidth / 2 / (window.innerHeight / 2),
       0.1,
       1000,
     );
 
     const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    renderer.setSize(width, window.innerHeight / 2);
 
     const onWindowResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
+      camera.fov = fov;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth * 0.5, window.innerHeight * 0.5);
+      renderer.setSize(width, window.innerHeight * 0.5);
     };
     const scene: THREE.Scene = new THREE.Scene();
     scene.background = new THREE.Color(backgroundColor);
@@ -58,7 +65,7 @@ export class ThreeComponent {
     const canvas: HTMLCanvasElement =
       this.threeContainer.nativeElement.appendChild(renderer.domElement);
 
-    canvas.width = window.innerWidth / 2;
+    canvas.width = width;
     canvas.height = window.innerHeight / 2;
 
     camera.position.z = 2;
