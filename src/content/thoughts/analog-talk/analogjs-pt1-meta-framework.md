@@ -9,7 +9,7 @@ date: 2024-10-10
 
 2024-10-10
 
-![analog.svg](../../../../public/analog.svg)
+![analog.svg](analog.svg)
 
 Analog.js is a meta-framework for Angular (think next.js/nuxt.js/sveltekit)
 created by [Brandon Roberts](https://x.com/brandontroberts) (maintainer of ngrx).
