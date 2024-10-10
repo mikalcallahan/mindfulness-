@@ -1,3 +1,5 @@
+@import "prismjs/themes/prism.css";
+
 /* You can add global styles to this file, and also import other style files */
 :root {
   /*font-family: Inter, Avenir, Helvetica, Arial, sans-serif;*/
@@ -130,6 +132,12 @@ h1 {
       color: var(--link-color-light-mode);
     }
   }
+}
+
+/* @TODO: move everything to this && don't use ridiculour rem */
+.analog-markdown {
+  padding: 7rem 60rem;
+  min-height: 100vh;
 }
 
 analog-markdown-route {
