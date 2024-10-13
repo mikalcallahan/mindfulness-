@@ -1,17 +1,30 @@
 #list-container {
+  .link.logo {
+    cursor: initial;
+    // margin-right: auto;
+  }
+
   #nav-list {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     list-style-type: none;
     padding: 0 2rem;
 
-    :first-child {
-      margin-right: auto;
-      padding-left: 0;
+    // li:first-child {
+    //   margin-right: auto;
+    // }
+
+    #links {
+      // flex-grow: 0.5;
+      // padding-right: 10%;
+
+      li {
+        padding-left: 0;
+      }
     }
 
     > li {
-      padding-left: 1rem;
+      // padding-left: 1rem;
 
       > ul {
         display: flex;
