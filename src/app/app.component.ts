@@ -6,19 +6,14 @@ import { NavbarComponent, ThreeComponent } from './shared/components';
   selector: 'app-root',
   standalone: true,
   imports: [NavbarComponent, RouterOutlet, ThreeComponent],
-  templateUrl: './app.component.html',
-  // template: ` <router-outlet></router-outlet> `,
-  /*
-  styles: [
-    `
-      :host {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-      }
-    `,
-  ],
-  */
+  template: `
+    @defer (on immediate) {
+      <navbar />
+      <router-outlet></router-outlet>
+      <app-three />
+    } @placeholder {
+      <div></div>
+    }
+  `,
 })
 export class AppComponent {}
