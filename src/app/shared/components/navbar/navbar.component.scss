@@ -9,6 +9,10 @@
     list-style-type: none;
     padding: 0 2rem;
 
+    @media (max-width: 430px) {
+      display: block;
+    }
+
     #links {
       li {
         padding-left: 0;
