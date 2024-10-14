@@ -1,0 +1,17 @@
+<script lang="ts">
+import { projectsList } from './index';
+const projects = projectsList;
+</script>
+<template lang="md">
+  # A few things I've worked on
+
+  <ul>
+    @for(project of projects; track project.link) {
+    <li class="link">
+      <h5>
+        <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+      </h5>
+    </li>
+    }
+  </ul>
+</template>

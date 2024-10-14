@@ -1,0 +1,32 @@
+<template lang="md">
+
+  ---
+  title: Thoughts
+  meta:
+  - name: thoughts home
+  content: Thoughts Page Description
+  - property: og:title
+  content: Thoughts
+  ---
+
+  # A collection of mostly shortform thoughts
+
+  <ul>
+    <li class="link">
+      <h5>
+        <a href="./thoughts/analog-talk">analog-talk</a>
+      </h5>
+    </li>
+    <li class="link">
+      <h5>
+        <a href="./thoughts/on-stillness">on-stillness</a>
+      </h5>
+    </li>
+    <li class="link">
+      <h5>
+        <a href="./thoughts/de-tristesse">de-tristesse</a>
+      </h5>
+    </li>
+  </ul>
+</template>
+</div>

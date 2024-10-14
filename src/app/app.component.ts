@@ -9,7 +9,9 @@ import { NavbarComponent, ThreeComponent } from './shared/components';
   template: `
     @defer (on immediate) {
       <navbar />
-      <router-outlet></router-outlet>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
       <app-three />
     } @placeholder {
       <div></div>
