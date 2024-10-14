@@ -16,6 +16,11 @@ export default defineConfig(({ mode }) => ({
       prerender: {
         routes: ['', '/moment'],
       },
+      vite: {
+        experimental: {
+          supportAnalogFormat: true,
+        },
+      },
     }),
   ],
   test: {

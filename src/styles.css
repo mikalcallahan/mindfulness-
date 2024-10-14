@@ -1,9 +1,14 @@
 @import "prismjs/themes/prism.css";
 
-/* You can add global styles to this file, and also import other style files */
+/* Global styles and custom properties */
 :root {
-  /*font-family: Inter, Avenir, Helvetica, Arial, sans-serif;*/
   color-scheme: light dark;
+  --white: rgba(255, 255, 255, 0.9);
+  --black: #151515;
+  --text-color-dark-mode: var(--white);
+  --text-color-light-mode: var(--black);
+  --link-color-light-mode: var(--black);
+
   color: var(--text-color-dark-mode);
   background-color: var(--black);
   letter-spacing: 0.013rem;
@@ -12,17 +17,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
-  --text-color-dark-mode: var(--white);
-  --white: rgba(255, 255, 255, 0.9);
-
-  /* --black: #100f0f; */
-  /* --black: #040303; */
-  --black: #151515;
-  --text-color-light-mode: var(--black);
-  --link-color-light-mode: var(--black);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color-light-mode);
+    background-color: var(--white);
+  }
+  a {
+    color: var(--link-color-light-mode);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Button styles */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -34,40 +47,26 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--text-color-light-mode);
-    background-color: var(--white);
-  }
-  a {
-    color: var(--link-color-light-mode);
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-body,
-html {
+/* Body and HTML base styles */
+html,
+body {
   height: 100%;
   margin: 0;
   width: 100%;
 }
 
 html {
-  font-size: 62.5%; /* 1.0rem = 10px*/
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 h1,
@@ -78,45 +77,25 @@ h2 {
   width: 100%;
 }
 
+h1 {
+  font-size: 3.2rem;
+}
+
 app-root {
   font-size: 1.6rem;
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2rem;
-}
-
+/* Layout styles */
 #container {
   height: 100vh;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
 }
 
-.page-container {
-  height: 100%;
-  overflow-x: hidden;
-  width: 100%;
-
-  > div {
-    margin-bottom: 22rem;
-  }
-}
-
+/* Link styles */
 .link {
   cursor: pointer;
   color: var(--text-color-dark-mode);
-
-  :is(a) {
-    color: var(--text-color-dark-mode);
-  }
-
-  &.link--no-underline {
-    :is(h5) {
-      :is(a) {
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 .link h5 {
@@ -124,42 +103,46 @@ h1 {
   margin: 0.5rem;
 }
 
+.link--no-underline a {
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: light) {
   .link {
     color: var(--link-color-light-mode);
-
-    :is(a) {
-      color: var(--link-color-light-mode);
-    }
   }
 }
 
-/* @TODO: move everything to this && don't use ridiculour rem */
-.analog-markdown {
-  padding: 7rem 60rem;
-  min-height: 100vh;
-}
-
-analog-markdown-route {
-  height: 100vh;
-  padding: 2rem;
+/* Content container styling */
+.content {
+  margin: 8% 0;
+  padding: 0 5%;
+  min-height: 70vh;
+  display: block; /* Default for mobile */
+  flex-direction: column;
   align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
-.analog-markdown-route {
-  line-height: 1.1;
-  margin-bottom: 44rem;
-  padding: 0 4rem;
+  @media (min-width: 996px) {
+    display: flex; /* Flex on wider screens */
+  }
 
-  :is(a) {
-    color: var(--text-color-dark-mode);
-    font-weight: 590;
+  app-about,
+  thoughts,
+  projects {
+    height: 70vh;
   }
 }
 
+/* Responsive images */
+img {
+  width: auto;
+
+  @media (max-width: 670px) {
+    width: 100%;
+  }
+}
+
+/* Markdown route styles */
 .analog-markdown-route h5 {
   font-size: 1.6rem;
   margin: 0.5rem;
@@ -170,9 +153,7 @@ analog-markdown-route {
 }
 
 @media (prefers-color-scheme: light) {
-  .analog-markdown-route {
-    :is(a) {
-      color: var(--link-color-light-mode);
-    }
+  .analog-markdown-route a {
+    color: var(--link-color-light-mode);
   }
 }

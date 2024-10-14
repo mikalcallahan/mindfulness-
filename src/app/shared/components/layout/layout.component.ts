@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  template: ` <div>
-    <h1>{{ header }}</h1>
-    <ng-content></ng-content>
-  </div>`,
+  template: `
+    <div class="layout-container">
+      <h1>{{ header() }}</h1>
+      <ng-content />
+    </div>
+  `,
 })
 export class LayoutComponent {
-  @Input() header: string = '';
+  header = input('');
 }
