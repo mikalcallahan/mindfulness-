@@ -17,10 +17,13 @@ export const projectsList: Project[] = [
     description: 'take a moment to reconnect with yourself with Moment',
   },
   {
-    name: 'scalaquote',
-    link: 'https://github.com/mikalcallahan/scalaquote',
-    description:
-      'scala-cli script to grab a list of quotes from a json and randomly display one',
+    name: 'Vish',
+    link: 'https://getvish.com',
+    description: 'Empower Your Salon With Precise Color Management',
+  },
+  {
+    name: 'Mindfulstreaming',
+    link: 'http://mindfulstreaming.now.sh',
   },
   {
     name: 'QuoteScript',
@@ -29,17 +32,20 @@ export const projectsList: Project[] = [
       'swift script to grab a list of quotes from a json and randomly display one',
   },
   {
-    name: 'Vish',
-    link: 'https://getvish.com',
-    description: 'Empower Your Salon With Precise Color Management',
+    name: 'EffectQuote',
+    link: 'https://github.com/mikalcallahan/effectquote',
+    description:
+      'swift script to grab a list of quotes from a json and randomly display one',
+  },
+  {
+    name: 'scalaquote',
+    link: 'https://github.com/mikalcallahan/scalaquote',
+    description:
+      'scala-cli script to grab a list of quotes from a json and randomly display one',
   },
   {
     name: 'Cosé',
     link: 'https://www.figma.com/file/LSCWlA3XrTkpU8RUPlYV5grz/conceptions?node-id=177%3A38',
-  },
-  {
-    name: 'Mindfulstreaming',
-    link: 'http://mindfulstreaming.now.sh',
   },
   {
     name: 'VueBoilerplate',
