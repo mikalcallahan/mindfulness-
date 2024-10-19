@@ -17,6 +17,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  code {
+    font-size: 0.8rem;
+    &.language-markup {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -138,11 +145,7 @@ app-root {
 
 /* Responsive images */
 img {
-  width: auto;
-
-  @media (max-width: 670px) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 /* Markdown route styles */
