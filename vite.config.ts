@@ -16,7 +16,9 @@ export default defineConfig(({ mode }) => ({
       prerender: {
         routes: async () => [
           '/',
+          '/about',
           '/moment',
+          '/projects',
           '/thoughts',
           '/thoughts/analog-talk',
           {

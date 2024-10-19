@@ -1,3 +1,6 @@
-import AboutComponent from './about/(about).page';
+import { RouteMeta } from '@analogjs/router';
 
-export default AboutComponent;
+export const routeMeta: RouteMeta = {
+  redirectTo: '/about',
+  pathMatch: 'full',
+};
