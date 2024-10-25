@@ -243,4 +243,4 @@ Route metadata can be defined. See [Route Metadata](https://analogjs.org/docs/fe
 
 [back to pt1.](./thoughts/analog-talk/pt1)
 
-<!-- [AnalogJS Pt3. Content Routes](./thoughts/analog-talk/pt2) -->
+[AnalogJS Pt3. Content Routes](./thoughts/analog-talk/pt3)

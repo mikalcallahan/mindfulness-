@@ -140,3 +140,7 @@ export default class MessagePage {
 ## Other features
 
 Other features such as syntax highlighting with [PrismJS](https://analogjs.org/docs/features/routing/content#prismjs-syntax-highlighting) or [Shiki](https://analogjs.org/docs/features/routing/content#shiki-syntax-highlighting) are available.
+
+[AnalogJS Pt2. File Based Routes](./thoughts/analog-talk/pt2)
+
+[AnalogJS Pt4. API Routes](./thoughts/analog-talk/pt4)
