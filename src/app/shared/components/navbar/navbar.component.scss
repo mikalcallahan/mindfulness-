@@ -1,0 +1,33 @@
+#list-container {
+  .link.logo {
+    cursor: initial;
+  }
+
+  #nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0 2rem;
+
+    @media (max-width: 430px) {
+      display: block;
+    }
+
+    #links {
+      li {
+        padding-left: 0;
+      }
+    }
+
+    > li {
+      > ul {
+        display: flex;
+        list-style-type: none;
+
+        > li {
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
+}

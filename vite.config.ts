@@ -14,10 +14,10 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     analog({
       content: {
-        highlighter: 'prismjs',
+        highlighter: 'prism',
       },
       prerender: {
-        routes: ['/blog', '/blog/2022-12-27-my-first-post'],
+        routes: ['/blog', 'projects', 'thoughts', '/blog/2022-12-27-my-first-post'],
       },
     }),
   ],
