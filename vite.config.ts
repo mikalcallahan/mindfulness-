@@ -15,6 +15,9 @@ export default defineConfig(({ mode }) => ({
     analog({
       content: {
         highlighter: 'prism',
+        prismOptions: {
+          additionalLangs: ['md']
+        }
       },
       prerender: {
         routes: ['/blog', '/projects', '/thoughts', '/blog/2022-12-27-my-first-post'],
