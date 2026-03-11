@@ -11,24 +11,23 @@ import { LayoutComponent } from '../../shared/';
   <ul>
     <li class="link">
       <h5>
-        <a href="./thoughts/analog-talk">analog-talk</a>
+        <a href="/thoughts/analog-talk">analog-talk</a>
       </h5>
     </li>
     <li class="link">
       <h5>
-        <a href="./thoughts/on-stillness">on-stillness</a>
+        <a href="/thoughts/on-stillness">on-stillness</a>
       </h5>
     </li>
     <li class="link">
       <h5>
-        <a href="./thoughts/de-tristesse">de-tristesse</a>
+        <a href="/thoughts/de-tristesse">de-tristesse</a>
       </h5>
     </li>
   </ul>
 
 </app-layout>
-`
+`,
 })
 export default class ThoughtsComponent {
 }
-
