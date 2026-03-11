@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { NavbarComponent, ThreeComponent } from './shared';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { ThreeComponent } from './shared/components/three/three.component';
 
 @Component({
   selector: 'app-root',
@@ -18,4 +19,4 @@ import { NavbarComponent, ThreeComponent } from './shared';
   `,
 
 })
-export class App { }
+export class App {}
