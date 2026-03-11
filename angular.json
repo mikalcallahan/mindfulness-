@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mindfulness": {
+    "blog": {
       "projectType": "application",
       "root": ".",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "blog",
       "architect": {
         "build": {
           "builder": "@analogjs/platform:vite",
@@ -32,27 +32,21 @@
           "builder": "@analogjs/platform:vite-dev-server",
           "defaultConfiguration": "development",
           "options": {
-            "buildTarget": "mindfulness:build",
-            "port": 4200
+            "buildTarget": "blog:build",
+            "port": 5173
           },
           "configurations": {
             "development": {
-              "buildTarget": "mindfulness:build:development",
+              "buildTarget": "blog:build:development",
               "hmr": true
             },
             "production": {
-              "buildTarget": "mindfulness:build:production"
+              "buildTarget": "blog:build:production"
             }
           }
         },
         "test": {
           "builder": "@analogjs/vitest-angular:test"
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
-          }
         }
       }
     }

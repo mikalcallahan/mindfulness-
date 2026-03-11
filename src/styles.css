@@ -1,6 +1,5 @@
-@import "prismjs/themes/prism.css";
+/* You can add global styles to this file, and also import other style files */
 
-/* Global styles and custom properties */
 :root {
   color-scheme: light dark;
   --white: rgba(255, 255, 255, 0.9);
@@ -47,62 +46,18 @@
   }
 }
 
-/* Button styles */
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+html {
+  font-size: 100%;
 }
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* Body and HTML base styles */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  width: 100%;
-}
-
 body {
   font-size: 1rem;
 }
 
-h1,
-h2 {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+html {
+  font-size: 16px; /* fallback */
+  font-size: 1rem;
 }
 
-h1 {
-  font-size: 2.1rem;
-}
-
-app-root {
-  overflow-x: hidden;
-}
-
-/* Layout styles */
-#container {
-  height: 100vh;
-  padding: 2rem;
-}
-
-/* Link styles */
 .link {
   cursor: pointer;
   color: var(--text-color-dark-mode);
@@ -117,13 +72,14 @@ app-root {
   text-decoration: none;
 }
 
+
 @media (prefers-color-scheme: light) {
   .link {
     color: var(--link-color-light-mode);
   }
 }
 
-/* Content container styling */
+
 .content {
   margin: 8% 0;
   padding: 0 5%;
@@ -143,12 +99,10 @@ app-root {
   }
 }
 
-/* Responsive images */
 img {
   width: 100%;
 }
 
-/* Markdown route styles */
 .analog-markdown-route h5 {
   margin: 0.5rem;
 }
@@ -158,3 +112,69 @@ img {
     color: var(--link-color-light-mode);
   }
 }
+
+/* a { */
+/*   font-weight: 500; */
+/*   color: #646cff; */
+/*   text-decoration: inherit; */
+/* } */
+/* a:hover { */
+/*   color: #535bf2; */
+/* } */
+
+/* body { */
+/*   margin: 0; */
+/*   display: flex; */
+/*   place-items: center; */
+/*   min-width: 320px; */
+/*   min-height: 100vh; */
+/* } */
+/**/
+/* h1 { */
+/*   font-size: 3.2em; */
+/*   line-height: 1.1; */
+/* } */
+/**/
+/* button { */
+/*   border-radius: 8px; */
+/*   border: 1px solid transparent; */
+/*   padding: 0.6em 1.2em; */
+/*   font-size: 1em; */
+/*   font-weight: 500; */
+/*   font-family: inherit; */
+/*   background-color: #1a1a1a; */
+/*   cursor: pointer; */
+/*   transition: border-color 0.25s; */
+/* } */
+/* button:hover { */
+/*   border-color: #646cff; */
+/* } */
+/* button:focus, */
+/* button:focus-visible { */
+/*   outline: 4px auto -webkit-focus-ring-color; */
+/* } */
+/**/
+/* .card { */
+/*   padding: 2em; */
+/* } */
+/**/
+/* @media (prefers-color-scheme: light) { */
+/*   :root { */
+/*     color: #213547; */
+/*     background-color: #ffffff; */
+/*   } */
+/*   a:hover { */
+/*     color: #747bff; */
+/*   } */
+/*   button { */
+/*     background-color: #f9f9f9; */
+/*   } */
+/* } */
+/**/
+/* .analog-markdown p { */
+/*   text-align: left; */
+/* } */
+
+/* ul { */
+/*   list-style-type: none; */
+/* } */

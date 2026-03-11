@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
-import analog, { PrerenderContentFile } from '@analogjs/platform';
+import analog from '@analogjs/platform';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -13,29 +13,11 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      prerender: {
-        routes: async () => [
-          '/',
-          '/about',
-          '/moment',
-          '/projects',
-          '/thoughts',
-          '/thoughts/analog-talk',
-          {
-            contentDir: 'src/content/thoughts/analog-talk',
-            transform: (file: PrerenderContentFile) => {
-              // do not include files marked as draft in frontmatter
-              // use the slug from frontmatter if defined, otherwise use the files basename
-              const slug = file.attributes['slug'] || file.name;
-              return `/blog/${slug}`;
-            },
-          },
-        ],
+      content: {
+        highlighter: 'prism',
       },
-      vite: {
-        experimental: {
-          supportAnalogFormat: true,
-        },
+      prerender: {
+        routes: ['/blog', 'projects', 'thoughts', '/blog/2022-12-27-my-first-post'],
       },
     }),
   ],
@@ -45,8 +27,5 @@ export default defineConfig(({ mode }) => ({
     setupFiles: ['src/test-setup.ts'],
     include: ['**/*.spec.ts'],
     reporters: ['default'],
-  },
-  define: {
-    'import.meta.vitest': mode !== 'production',
   },
 }));
